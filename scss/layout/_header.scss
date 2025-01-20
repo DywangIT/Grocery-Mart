@@ -1,0 +1,117 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background: var(--header-bg-color);
+
+    @include abstracts.breakpoint(lg) {
+        box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+    }
+}
+
+.top-bar {
+    position: relative;
+    @extend %flexItemCenter;
+    padding: 30px 0;
+    @include abstracts.breakpoint(md) {
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    @include abstracts.breakpoint(sm) {
+        padding: 16px 0;
+    }
+
+    &__toggle {
+        display: none;
+        @include abstracts.breakpoint(lg) {
+            display: block;
+        }
+    }
+}
+
+.navbar {
+    margin-left: 129px;
+    @include abstracts.breakpoint(xl) {
+        margin-left: 28px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
+
+    &__list {
+        @extend %flexItemCenter;
+    }
+    &__item {
+        &:hover .dropdown {
+            display: block;
+        }
+    }
+    &__link {
+        @extend %flexItemCenter;
+        height: 50px;
+        padding: 0 15px;
+        gap: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__arrow {
+        margin-top: 4px;
+    }
+}
+
+.top-act {
+    @extend %flexItemCenter;
+    gap: 20px;
+    margin-left: auto;
+    @include abstracts.breakpoint(md) {
+        margin-left: 0;
+    }
+    &__group {
+        min-width: 50px;
+        height: 50px;
+        @extend %flexItemCenter;
+        border-radius: 8px;
+        background: var(--top-act-group-bg-color);
+        box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }
+    }
+    &__btn {
+        @extend %flexItemCenter;
+        gap: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    &__group--single {
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
+    }
+    &__group--single &__btn {
+        padding: 13px;
+    }
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__separate {
+        width: 1px;
+        height: 30px;
+        background: #ededf6;
+    }
+    &__avatar {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}

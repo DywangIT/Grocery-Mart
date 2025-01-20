@@ -1,0 +1,123 @@
+@use "../abstracts";
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    padding-top: 54px;
+    width: min(1240px, 100%);
+    display: none;
+
+    &__inner {
+        --inner-padding: 30px;
+        position: relative;
+        padding: var(--inner-padding);
+        border-radius: 20px;
+        background: var(--dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+        &::before {
+            content: url(../icons/dropdown-arrow.svg);
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            translate: -50%;
+            filter: var(--dropdown-filter-color);
+        }
+    }
+}
+
+.top-menu {
+    --top-menu-width: 292px;
+    --max-inner-height: calc(min(582px, 100vh - 145px) - var(--inner-padding) * 2);
+
+    position: relative;
+
+    &__main {
+        width: var(--top-menu-width);
+        height: var(--max-inner-height);
+        border-right: 1px solid var(--top-menu-border-color);
+        overflow-y: auto;
+    }
+}
+
+.menu-column {
+    display: flex;
+    gap: 14px;
+    + .menu-column {
+        margin-top: 20px;
+    }
+    &__item {
+        &--active .sub-menu {
+            display: grid;
+        }
+        &--active > .menu-column__link,
+        &:hover > .menu-column__link {
+            color: #0071dc;
+            font-weight: 500;
+        }
+    }
+    &__icon {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        position: relative;
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
+        &-1 {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+        &-2 {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            filter: var(--menu-column-icon-color);
+        }
+    }
+    &__content {
+        flex: 1;
+    }
+    &__heading {
+        margin-top: 4px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--menu-column-heading-color);
+    }
+    &__list {
+        margin-top: 19px;
+    }
+    &__link {
+        display: block;
+        padding: 7px 0;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+        color: var(--menu-column-link-color);
+        &:hover {
+            color: #0071dc;
+            font-weight: 500;
+        }
+    }
+}
+
+.sub-menu {
+    position: absolute;
+    inset: 0 0 0 var(--top-menu-width);
+    padding-left: var(--inner-padding);
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
+
+    &--not-main {
+        position: initial;
+        inset: initial;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 0;
+        height: var(--max-inner-height);
+    }
+}
