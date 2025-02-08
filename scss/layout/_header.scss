@@ -17,19 +17,14 @@
     position: relative;
     @extend %flexItemCenter;
     padding: 30px 0;
+
     @include abstracts.breakpoint(md) {
         justify-content: space-between;
         padding: 20px 0;
     }
+
     @include abstracts.breakpoint(sm) {
         padding: 16px 0;
-    }
-
-    &__toggle {
-        display: none;
-        @include abstracts.breakpoint(lg) {
-            display: block;
-        }
     }
 }
 
@@ -40,15 +35,86 @@
     }
 
     @include abstracts.breakpoint(lg) {
+        margin-left: 0;
+        position: fixed;
+        inset: 0 50% 0 0;
+        padding: 20px 0;
+        border-radius: 0px 20px 20px 0px;
+        z-index: 4;
+        background: var(--sidebar-bg);
+        translate: -100%;
+        transition: 0.3s;
+
+        &.show {
+            box-shadow: var(--sidebar-shadow);
+            translate: 0;
+        }
+
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    @include abstracts.breakpoint(sm) {
+        inset: 0 20% 0 0;
+    }
+
+    &__close-btn {
         display: none;
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            padding: 10px 40px;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0px 20px 10px;
+        }
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity, visibility;
+        transition-duration: 0.3s;
+
+        @include abstracts.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            z-index: 3;
+            background: rgba(0 0 0 / 0.1);
+        }
     }
 
     &__list {
         @extend %flexItemCenter;
+        height: calc(100% - 40px);
+        overflow-y: auto;
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: start;
+        }
+        @include abstracts.breakpoint(md) {
+            height: calc(100% - 140px);
+        }
+        @include abstracts.breakpoint(sm) {
+            height: calc(100% - 120px);
+        }
     }
     &__item {
         &:hover .dropdown {
             display: block;
+        }
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            &:hover .dropdown {
+                display: none;
+            }
+
+            &--active .dropdown {
+                display: block !important;
+            }
         }
     }
     &__link {
@@ -59,9 +125,30 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstracts.breakpoint(lg) {
+            padding: 0 40px;
+            font-size: 1.6rem;
+            line-height: 150%;
+            justify-content: space-between;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            height: 44px;
+            padding: 0 20px;
+        }
     }
     &__arrow {
         margin-top: 4px;
+
+        @include abstracts.breakpoint(lg) {
+            rotate: -90deg;
+            transition: rotate 0.3s;
+        }
+    }
+
+    &__item--active &__arrow {
+        rotate: 0deg;
     }
 }
 
@@ -79,9 +166,6 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-        @include abstracts.breakpoint(md) {
-            display: none;
-        }
     }
     &__btn {
         @extend %flexItemCenter;
@@ -113,5 +197,27 @@
         height: 50px;
         border-radius: 8px;
         cursor: pointer;
+    }
+}
+
+.nav-btn {
+    padding: 0 40px;
+    align-items: center;
+    height: 50px;
+
+    @include abstracts.breakpoint(sm) {
+        height: 44px;
+        padding: 0 20px;
+    }
+
+    &__title {
+        margin-left: 16px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__qnt {
+        @extend .nav-btn__title;
+        margin-left: auto;
     }
 }

@@ -18,6 +18,9 @@ html.dark {
         saturate(1251%) hue-rotate(202deg) brightness(102%) contrast(97%);
     --menu-column-heading-color: #B9BABE;
     --menu-column-link-color: #B9BABE;
+    // sidebar
+    --sidebar-bg: #292E39;
+    --sidebar-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.40);
     @include abstracts.breakpoint(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
