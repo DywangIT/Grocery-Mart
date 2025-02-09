@@ -89,11 +89,14 @@
 
     &__list {
         @extend %flexItemCenter;
-        height: calc(100% - 40px);
-        overflow-y: auto;
         @include abstracts.breakpoint(lg) {
             flex-direction: column;
             align-items: start;
+
+            height: calc(100% - 40px);
+            overflow-y: auto;
+            scroll-behavior: contain;
+            
         }
         @include abstracts.breakpoint(md) {
             height: calc(100% - 140px);

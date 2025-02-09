@@ -1563,14 +1563,13 @@ img {
     background: rgba(0, 0, 0, 0.1);
   }
 }
-.navbar__list {
-  height: calc(100% - 40px);
-  overflow-y: auto;
-}
 @media (max-width: 991.98px) {
   .navbar__list {
     flex-direction: column;
     align-items: start;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+    scroll-behavior: contain;
   }
 }
 @media (max-width: 767.98px) {
@@ -1770,6 +1769,11 @@ img {
   }
   .dropdown__inner::before {
     content: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .dropdown__inner {
+    padding: 0 20px;
   }
 }
 
