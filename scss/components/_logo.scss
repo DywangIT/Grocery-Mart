@@ -5,25 +5,24 @@
     align-items: center;
     gap: 14px;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         gap: 10px;
         margin-left: 40px;
     }
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         margin-left: 0;
     }
-
 
     &__title {
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.45455; /* 145.455% */
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             font-size: 1.8rem;
         }
     }
     &__img {
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 24px;
         }
     }

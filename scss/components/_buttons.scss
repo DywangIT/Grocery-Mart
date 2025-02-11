@@ -1,0 +1,24 @@
+.filter-btn {
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 14px;
+    border-radius: 6px;
+    background: var(--filter-btn-bg);
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 142.857%;
+    color: var(--filter-btn-color);
+}
+
+.like-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: var(--like-btn-bg);
+    box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+}
