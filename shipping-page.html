@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipping | Grocery Mart</title>
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/tabzi@v1.0.0/tabzi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="header"></header>
+    <script>load("#header", "./templates/header-logined.html");</script>
+    <!-- Main -->
+    <main class="product-page checkout-page">
+        <div class="container">
+            <!-- product-container -->
+            <div class="product-container">
+                <!-- Search box -->
+                <div class="product-search d-none d-md-flex">
+                    <input type="text" class="product-search__input" placeholder="Search for item" />
+                    <button class="product-search__button">
+                        <img src="./assets/icons/search.svg" alt="" />
+                    </button>
+                </div>
+
+                <!-- Breadcumbs -->
+                <ul class="breadcumbs">
+                    <li>
+                        <a href="./home.html" class="breadcumbs__link">Home
+                            <img src="./assets/icons/arrow-right.svg" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./checkout-page.html" class="breadcumbs__link">Checkout
+                            <img src="./assets/icons/arrow-right.svg" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="breadcumbs__link breadcumbs__link--current">Shipping</a>
+                    </li>
+                </ul>
+
+                <!-- Checkout -->
+                <section class="checkout row gy-lg-3">
+                    <div class="col-8 col-lg-12">
+                        <div class="checkout__products shipping">
+                            <!-- Shipping Info -->
+                            <h2 class="shipping__title">1. Shipping, arrives between Mon, May 16—Tue, May 24</h2>
+
+                            <div class="checkout-divider"></div>
+
+                            <div class="shipping__address-section">
+                                <div class="shipping__address-row">
+                                    <div class="shipping__address-text">
+                                        <h3 class="shipping__address-title">Shipping address</h3>
+                                        <p class="shipping__address-subtitle">Where should we deliver your order?</p>
+                                    </div>
+                                    <button class="shipping__add-address-button primary-btn">
+                                        <img src="./assets/icons/plusbtn.svg" alt="">
+                                        <span>Add a new address</span>
+                                    </button>
+                                </div>
+
+                                <div class="shipping__address-list">
+
+                                    <!-- Address item (selected) -->
+                                    <div class="address-card">
+
+                                        <label class="address-card__header">
+                                            <input type="checkbox" class="address-card__checkbox" />
+                                            <span class="address-card__name">Imran Khan</span>
+                                        </label>
+
+                                        <div class="address-card__address">
+                                            Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                                        </div>
+
+                                        <ul class="address-card__services">
+                                            <li class="address-card__service-item">Shipping</li>
+                                            <li class="address-card__service-item">Delivery from store</li>
+                                        </ul>
+
+                                        <button class="address-card__edit-btn">
+                                            <img src="./assets/icons/pencil.svg" alt="" class="icon">
+                                            <span>Edit</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Address item (selected) -->
+                                    <div class="address-card">
+
+                                        <label class="address-card__header">
+                                            <input type="checkbox" class="address-card__checkbox" />
+                                            <span class="address-card__name">Imran Khan</span>
+                                        </label>
+
+                                        <div class="address-card__address">
+                                            Al Hamra City (10th Floor), Hazrat Shahjalal Road, Sylhet, Sylhet,
+                                            Bangladesh
+                                        </div>
+
+                                        <ul class="address-card__services">
+                                            <li class="address-card__service-item">Shipping</li>
+                                            <li class="address-card__service-item">Delivery from store</li>
+                                        </ul>
+
+                                        <button class="address-card__edit-btn">
+                                            <img src="./assets/icons/pencil.svg" alt="" class="icon">
+                                            <span>Edit</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="shipping__items-title">Items details</h3>
+                            <div class="checkout__product">
+                                <div class="checkout__product-image">
+                                    <img src="./assets/imgs/product/item 4.png"
+                                        alt="Coffee Beans - Espresso Arabica and Robusta Beans" />
+                                </div>
+                                <div class="checkout__product-info">
+                                    <div class="checkout__product-info-row">
+                                        <h3 class="checkout__product-name">
+                                            Coffee Beans - Espresso Arabica
+                                            and Robusta Beans
+                                        </h3>
+                                        <div class="checkout__product-total-price">
+                                            $47.00
+                                        </div>
+                                    </div>
+                                    <div class="checkout__price-stock">
+                                        <span class="checkout__price">$38.65</span>
+                                        <span class="checkout__separator">|</span>
+                                        <span class="checkout__stock checkout__stock--in">In Stock</span>
+                                    </div>
+
+                                    <div class="checkout__product-info-row d-xxl-block">
+                                        <div class="checkout__product-controls">
+                                            <div class="checkout__product-brand">
+                                                <div class="checkout__brand-dropdown">
+                                                    <div class="checkout__brand-selected">
+                                                        <span class="checkout__brand-label">LavAzza</span>
+                                                        <img src="./assets/icons/arrow-down.svg" alt="Arrow"
+                                                            class="checkout__brand-icon icon" />
+                                                    </div>
+                                                    <ul class="checkout__brand-list">
+                                                        <li class="checkout__brand-item">LavAzza</li>
+                                                        <li class="checkout__brand-item">Starbucks</li>
+                                                        <li class="checkout__brand-item">Nestlé</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout__product-quantity">
+                                                <button class="checkout__quantity-btn">
+                                                    <img src="./assets/icons/minusBtn.svg" alt="" class="icon" />
+                                                </button>
+                                                <input type="text" value="1" class="checkout__quantity-input" />
+                                                <button class="checkout__quantity-btn">
+                                                    <img src="./assets/icons/plusbtn.svg" alt="" class="icon" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="checkout__product-actions">
+                                            <button class="checkout__product-save">
+                                                <img src="./assets/icons/heart.svg" alt="">
+                                                <span>Save</span>
+                                            </button>
+                                            <button class="checkout__product-delete">
+                                                <img src="./assets/icons/bin.svg" alt="">
+                                                <span>Delete</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-divider"></div>
+                            <!-- Product Item -->
+                            <div class="checkout__product">
+                                <div class="checkout__product-image">
+                                    <img src="./assets/imgs/product/item 4.png"
+                                        alt="Coffee Beans - Espresso Arabica and Robusta Beans" />
+                                </div>
+                                <div class="checkout__product-info">
+                                    <div class="checkout__product-info-row">
+                                        <h3 class="checkout__product-name">
+                                            Coffee Beans - Espresso Arabica
+                                            and Robusta Beans
+                                        </h3>
+                                        <div class="checkout__product-total-price">
+                                            $47.00
+                                        </div>
+                                    </div>
+                                    <div class="checkout__price-stock">
+                                        <span class="checkout__price">$38.65</span>
+                                        <span class="checkout__separator">|</span>
+                                        <span class="checkout__stock checkout__stock--in">In Stock</span>
+                                    </div>
+
+                                    <div class="checkout__product-info-row d-xxl-block">
+                                        <div class="checkout__product-controls">
+                                            <div class="checkout__product-brand">
+                                                <div class="checkout__brand-dropdown">
+                                                    <div class="checkout__brand-selected">
+                                                        <span class="checkout__brand-label">LavAzza</span>
+                                                        <img src="./assets/icons/arrow-down.svg" alt="Arrow"
+                                                            class="checkout__brand-icon icon" />
+                                                    </div>
+                                                    <ul class="checkout__brand-list">
+                                                        <li class="checkout__brand-item">LavAzza</li>
+                                                        <li class="checkout__brand-item">Starbucks</li>
+                                                        <li class="checkout__brand-item">Nestlé</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout__product-quantity">
+                                                <button class="checkout__quantity-btn">
+                                                    <img src="./assets/icons/minusBtn.svg" alt="" class="icon" />
+                                                </button>
+                                                <input type="text" value="1" class="checkout__quantity-input" />
+                                                <button class="checkout__quantity-btn">
+                                                    <img src="./assets/icons/plusbtn.svg" alt="" class="icon" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="checkout__product-actions">
+                                            <button class="checkout__product-save">
+                                                <img src="./assets/icons/heart.svg" alt="">
+                                                <span>Save</span>
+                                            </button>
+                                            <button class="checkout__product-delete">
+                                                <img src="./assets/icons/bin.svg" alt="">
+                                                <span>Delete</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-divider"></div>
+
+                            <!-- Product Item -->
+                            <div class="checkout__product">
+                                <div class="checkout__product-image">
+                                    <img src="./assets/imgs/product/item 4.png"
+                                        alt="Coffee Beans - Espresso Arabica and Robusta Beans" />
+                                </div>
+                                <div class="checkout__product-info">
+                                    <div class="checkout__product-info-row">
+                                        <h3 class="checkout__product-name">
+                                            Coffee Beans - Espresso Arabica
+                                            and Robusta Beans
+                                        </h3>
+                                        <div class="checkout__product-total-price">
+                                            $47.00
+                                        </div>
+                                    </div>
+                                    <div class="checkout__price-stock">
+                                        <span class="checkout__price">$38.65</span>
+                                        <span class="checkout__separator">|</span>
+                                        <span class="checkout__stock checkout__stock--in">In Stock</span>
+                                    </div>
+
+                                    <div class="checkout__product-info-row d-xxl-block">
+                                        <div class="checkout__product-controls">
+                                            <div class="checkout__product-brand">
+                                                <div class="checkout__brand-dropdown">
+                                                    <div class="checkout__brand-selected">
+                                                        <span class="checkout__brand-label">LavAzza</span>
+                                                        <img src="./assets/icons/arrow-down.svg" alt="Arrow"
+                                                            class="checkout__brand-icon icon" />
+                                                    </div>
+                                                    <ul class="checkout__brand-list">
+                                                        <li class="checkout__brand-item">LavAzza</li>
+                                                        <li class="checkout__brand-item">Starbucks</li>
+                                                        <li class="checkout__brand-item">Nestlé</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="checkout__product-quantity">
+                                                <button class="checkout__quantity-btn">
+                                                    <img src="./assets/icons/minusBtn.svg" alt="" class="icon" />
+                                                </button>
+                                                <input type="text" value="1" class="checkout__quantity-input" />
+                                                <button class="checkout__quantity-btn">
+                                                    <img src="./assets/icons/plusbtn.svg" alt="" class="icon" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="checkout__product-actions">
+                                            <button class="checkout__product-save">
+                                                <img src="./assets/icons/heart.svg" alt="">
+                                                <span>Save</span>
+                                            </button>
+                                            <button class="checkout__product-delete">
+                                                <img src="./assets/icons/bin.svg" alt="">
+                                                <span>Delete</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Checkout footer -->
+                            <div class="checkout__footer shipping__footer d-lg-none">
+                                <a href="home.html" class="checkout-backlink">
+                                    <img src="./assets/icons/left.svg" alt="" class="icon">
+                                    <span>Continue Shopping</span>
+                                </a>
+                                <a href="./payment-page.html" class="shipping__footer-btn primary-btn">Continue</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-12">
+                        <div class="checkout-summary">
+                            <!-- Summary Items -->
+                            <div class="checkout-summary__list">
+                                <div class="checkout-summary__row">
+                                    <span class="checkout-summary__label">Subtotal <span
+                                            class="checkout-summary__sub">(items)</span></span>
+                                    <span class="checkout-summary__value">3</span>
+                                </div>
+                                <div class="checkout-summary__row">
+                                    <span class="checkout-summary__label">Price <span
+                                            class="checkout-summary__sub">(Total)</span></span>
+                                    <span class="checkout-summary__value">$191.65</span>
+                                </div>
+                                <div class="checkout-summary__row">
+                                    <span class="checkout-summary__label">Shipping</span>
+                                    <span class="checkout-summary__value">$10.00</span>
+                                </div>
+                                <div class="checkout-divider"></div>
+                                <div class="checkout-summary__row checkout-summary__row--total">
+                                    <span class="checkout-summary__label">Estimated Total</span>
+                                    <span class="checkout-summary__value">$201.65</span>
+                                </div>
+                            </div>
+                            <div class="checkout__footer shipping__footer d-none d-lg-flex">
+                                <a href="./payment-page.html" class="shipping__footer-btn primary-btn">Continue</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- ============================ -->
+                <template class="shipping-form" id="shipping-form-template">
+                    <h2 class="shipping-form__title">Add Shipping Address</h2>
+
+                    <div class="shipping-form__group">
+                        <label class="shipping-form__label">Company's Name (Optional)</label>
+                        <input type="text" class="shipping-form__input" />
+                    </div>
+
+                    <div class="shipping-form__row">
+                        <div class="shipping-form__group">
+                            <label class="shipping-form__label">Name</label>
+                            <input type="text" class="shipping-form__input" />
+                        </div>
+                        <div class="shipping-form__group">
+                            <label class="shipping-form__label">Phone Number</label>
+                            <input type="text" class="shipping-form__input" />
+                        </div>
+                    </div>
+
+                    <div class="shipping-form__row">
+                        <div class="shipping-form__group">
+                            <label class="shipping-form__label">Pincode</label>
+                            <input type="text" class="shipping-form__input" />
+                        </div>
+                        <div class="shipping-form__group">
+                            <label class="shipping-form__label">Area and Street</label>
+                            <input type="text" class="shipping-form__input" />
+                        </div>
+                    </div>
+
+                    <div class="shipping-form__row">
+                        <div class="shipping-form__group">
+                            <label class="shipping-form__label" for="city">City/District/Town</label>
+                            <select id="city" class="shipping-form__select">
+                                <option value="">-- Select City --</option>
+                                <option value="An Giang">An Giang</option>
+                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                <option value="Bắc Giang">Bắc Giang</option>
+                                <option value="Bắc Kạn">Bắc Kạn</option>
+                                <option value="Bạc Liêu">Bạc Liêu</option>
+                                <option value="Bắc Ninh">Bắc Ninh</option>
+                                <option value="Bến Tre">Bến Tre</option>
+                                <option value="Bình Định">Bình Định</option>
+                                <option value="Bình Dương">Bình Dương</option>
+                                <option value="Bình Phước">Bình Phước</option>
+                                <option value="Bình Thuận">Bình Thuận</option>
+                                <option value="Cà Mau">Cà Mau</option>
+                                <option value="Cần Thơ">Cần Thơ</option>
+                                <option value="Cao Bằng">Cao Bằng</option>
+                                <option value="Đà Nẵng">Đà Nẵng</option>
+                                <option value="Đắk Lắk">Đắk Lắk</option>
+                                <option value="Đắk Nông">Đắk Nông</option>
+                                <option value="Điện Biên">Điện Biên</option>
+                                <option value="Đồng Nai">Đồng Nai</option>
+                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                <option value="Gia Lai">Gia Lai</option>
+                                <option value="Hà Giang">Hà Giang</option>
+                                <option value="Hà Nam">Hà Nam</option>
+                                <option value="Hà Nội">Hà Nội</option>
+                                <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                <option value="Hải Dương">Hải Dương</option>
+                                <option value="Hải Phòng">Hải Phòng</option>
+                                <option value="Hậu Giang">Hậu Giang</option>
+                                <option value="Hòa Bình">Hòa Bình</option>
+                                <option value="Hưng Yên">Hưng Yên</option>
+                                <option value="Khánh Hòa">Khánh Hòa</option>
+                                <option value="Kiên Giang">Kiên Giang</option>
+                                <option value="Kon Tum">Kon Tum</option>
+                                <option value="Lai Châu">Lai Châu</option>
+                                <option value="Lâm Đồng">Lâm Đồng</option>
+                                <option value="Lạng Sơn">Lạng Sơn</option>
+                                <option value="Lào Cai">Lào Cai</option>
+                                <option value="Long An">Long An</option>
+                                <option value="Nam Định">Nam Định</option>
+                                <option value="Nghệ An">Nghệ An</option>
+                                <option value="Ninh Bình">Ninh Bình</option>
+                                <option value="Ninh Thuận">Ninh Thuận</option>
+                                <option value="Phú Thọ">Phú Thọ</option>
+                                <option value="Phú Yên">Phú Yên</option>
+                                <option value="Quảng Bình">Quảng Bình</option>
+                                <option value="Quảng Nam">Quảng Nam</option>
+                                <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                <option value="Quảng Ninh">Quảng Ninh</option>
+                                <option value="Quảng Trị">Quảng Trị</option>
+                                <option value="Sóc Trăng">Sóc Trăng</option>
+                                <option value="Sơn La">Sơn La</option>
+                                <option value="Tây Ninh">Tây Ninh</option>
+                                <option value="Thái Bình">Thái Bình</option>
+                                <option value="Thái Nguyên">Thái Nguyên</option>
+                                <option value="Thanh Hóa">Thanh Hóa</option>
+                                <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                <option value="Tiền Giang">Tiền Giang</option>
+                                <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                                <option value="Trà Vinh">Trà Vinh</option>
+                                <option value="Tuyên Quang">Tuyên Quang</option>
+                                <option value="Vĩnh Long">Vĩnh Long</option>
+                                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                <option value="Yên Bái">Yên Bái</option>
+                            </select>
+                        </div>
+
+                        <div class="shipping-form__group">
+                            <label class="shipping-form__label">State</label>
+                            <input type="text" class="shipping-form__input" />
+                        </div>
+                    </div>
+
+                    <div class="shipping-form__checkbox-row">
+                        <label class="shipping-form__checkbox-label">
+                            <input type="checkbox" checked class="shipping-form__checkbox" />
+                            Same as Billing Address
+                        </label>
+                        <a href="#" class="shipping-form__billing-link">Add Billing Address</a>
+                    </div>
+
+                    <button type="submit" class="shipping-form__submit-btn">
+                        Save and Deliver here
+                    </button>
+                </template>
+
+                <!-- ============================ -->
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>load("#footer", "./templates/footer.html")</script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        document.querySelectorAll(".checkout__brand-dropdown").forEach((dropdown) => {
+            const selected = dropdown.querySelector(".checkout__brand-selected");
+            const label = dropdown.querySelector(".checkout__brand-label");
+            const items = dropdown.querySelectorAll(".checkout__brand-item");
+
+            selected.onclick = () => {
+                dropdown.classList.toggle("open");
+            };
+
+            items.forEach((item) => {
+                item.onclick = () => {
+                    label.textContent = item.textContent;
+                    dropdown.classList.remove("open");
+                };
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove("open");
+                }
+            });
+        });
+        // checkbox
+        document.addEventListener("DOMContentLoaded", function () {
+            const addressCards = document.querySelectorAll(".address-card");
+
+            addressCards.forEach((card) => {
+                const checkbox = card.querySelector(".address-card__checkbox");
+
+                checkbox.addEventListener("change", function () {
+                    if (this.checked) {
+                        // Bỏ chọn tất cả các checkbox khác
+                        addressCards.forEach((otherCard) => {
+                            const otherCheckbox = otherCard.querySelector(".address-card__checkbox");
+                            if (otherCheckbox !== this) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
+        // open shipping form
+        document.addEventListener("DOMContentLoaded", function () {
+            const shippingForm = new Mozi({
+                templateId: 'shipping-form-template',
+                footer: false,
+                destroyOnClose: true,
+                closeMethods: ['overlay', 'x', 'escape'],
+                cssClass: ['custom-class-1', 'custom-class-2']
+            });
+            const shippingButton = document.querySelector('.shipping__add-address-button');
+            shippingButton.addEventListener('click', function () {
+                shippingForm.open();
+            });
+        })
+
+    </script>
+</body>
+
+</html>

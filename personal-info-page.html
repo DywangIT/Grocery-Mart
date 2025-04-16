@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Info | Grocery Mart</title>
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/tabzi@v1.0.0/tabzi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="header"></header>
+    <script>load("#header", "./templates/header-logined.html");</script>
+    <!-- Main -->
+    <main class="profile-page">
+        <div class="container">
+            <!-- Search box -->
+            <div class="product-search d-none d-md-flex">
+                <input type="text" class="product-search__input" placeholder="Search for item" />
+                <button class="product-search__button">
+                    <img src="./assets/icons/search.svg" alt="" />
+                </button>
+            </div>
+            <div class="profile row gx-lg-2">
+                <!--  -->
+                <div class=" col-3 col-lg-4 col-md-12 d-md-none">
+                    <aside class="sidebar">
+                        <div class="sidebar__profile">
+                            <div class="sidebar__avatar">
+                                <img src="https://c4.wallpaperflare.com/wallpaper/459/87/740/cat-glasses-space-abstract-wallpaper-thumb.jpg"
+                                    alt="Imran Khan" class="sidebar__avatar-img" />
+                            </div>
+                            <div class="sidebar__info">
+                                <h2 class="sidebar__name">Imran Khan</h2>
+                                <p class="sidebar__date">Registered: 17th May 2022</p>
+                            </div>
+                            <div class="sidebar__profile-overlay"> </div>
+                        </div>
+                        <div class="sidebar__container">
+
+                            <nav class="sidebar__section">
+                                <h3 class="sidebar__title">Manage Account</h3>
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                src="./assets/icons/profile-icon/profile.svg" alt="" class="icon"></div>
+                                        <a href="#" class="sidebar__link">Personal info</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                src="./assets/icons/profile-icon/location.svg" alt="" class="icon">
+                                        </div>
+                                        <a href="#" class="sidebar__link">Addresses</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                src="./assets/icons/profile-icon/message.svg" alt="" class="icon"></div>
+                                        <a href="#" class="sidebar__link">Communications &amp; privacy</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <nav class="sidebar__section">
+                                <h3 class="sidebar__title">My items</h3>
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon"
+                                                src="./assets/icons/profile-icon/download.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Reorder</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon"
+                                                src="./assets/icons/profile-icon/heart.svg" alt=""></div>
+                                        <a href="./favorite-page.html" class="sidebar__link">Lists</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon"
+                                                src="./assets/icons/profile-icon/gift.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Registries</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <nav class="sidebar__section">
+                                <h3 class="sidebar__title">Subscriptions &amp; plans</h3>
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon"
+                                                src="./assets/icons/profile-icon/shielddone.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Protection plans</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <nav class="sidebar__section">
+                                <h3 class="sidebar__title">Customer Service</h3>
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon"
+                                                src="./assets/icons/profile-icon/infosquare.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Help</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon"
+                                                src="./assets/icons/profile-icon/dangercircle.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Terms of Use</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
+                </div>
+                <!--  -->
+                <div class="col-9 col-lg-8 col-md-12">
+                    <div class="personal-info">
+                        <div class="personal-info__header">
+                            <a href="./profile-page.html"><img src="./assets/icons/arrow-left.svg" class="icon" alt=""></a>
+                            <h2 class="personal-info__title">Personal info</h2>
+                        </div>
+
+                        <form class="personal-info__form">
+                            <div class="personal-info__row">
+                                <div class="personal-info__group">
+                                    <label for="full-name" class="personal-info__label">Full name</label>
+                                    <input type="text" id="full-name" class="personal-info__input"
+                                        placeholder="Imran Khan" />
+                                </div>
+
+                                <div class="personal-info__group">
+                                    <label for="email" class="personal-info__label">Email address</label>
+                                    <input type="email" id="email" class="personal-info__input"
+                                        placeholder="admin@uihut.com" />
+                                </div>
+                            </div>
+
+                            <div class="personal-info__row">
+                                <div class="personal-info__group">
+                                    <label for="phone" class="personal-info__label">Phone number</label>
+                                    <input type="text" id="phone" class="personal-info__input"
+                                        placeholder="+008 01234 56789" />
+                                </div>
+
+                                <div class="personal-info__group">
+                                    <label for="password" class="personal-info__label">Password</label>
+                                    <input type="password" id="password" class="personal-info__input"
+                                        placeholder="••••••••" />
+                                </div>
+                            </div>
+
+                            <div class="personal-info__actions">
+                                <button type="button"
+                                    class="personal-info__button">Cancel</button>
+                                <button type="submit" class="personal-info__button primary-btn">Save
+                                    Edit</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>load("#footer", "./templates/footer.html")</script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -3,9 +3,9 @@
 .dropdown {
     position: absolute;
     left: 0;
-    padding-top: 54px;
     width: min(1240px, 100%);
     display: none;
+    margin-top: 54px;
 
     @include abstracts.screen(lg) {
         position: initial;
@@ -47,7 +47,9 @@
 
 .top-menu {
     --top-menu-width: 292px;
-    --max-inner-height: calc(min(582px, 100vh - 145px) - var(--inner-padding) * 2);
+    --max-inner-height: calc(
+        min(582px, 100vh - 145px) - var(--inner-padding) * 2
+    );
 
     position: relative;
 

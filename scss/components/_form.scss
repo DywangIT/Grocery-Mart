@@ -1,0 +1,151 @@
+@use "../abstracts";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min(460px, 100%);
+
+    .user-input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        position: relative;
+
+        border-radius: 10px;
+        border: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
+
+        img {
+            width: 20px;
+        }
+
+        input {
+            flex: 1;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+            color: var(--form-input-color);
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+        }
+        input::placeholder {
+            color: #d2d1d6;
+        }
+    }
+    &-input__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        &__box {
+            height: 0;
+            position: relative;
+        }
+
+        &__box::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #9e9da8;
+            border-radius: 5px;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            @include abstracts.screen(md) {
+                border-width: 1px;
+            }
+        }
+
+        &__box::after {
+            content: "✔"; /* Dấu check */
+            font-size: 1.4rem;
+            color: var(--auth-text-color);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        &__desc {
+            color: #9e9da8;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+            user-select: none;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 142.857%;
+            }
+        }
+    }
+
+    &__btn-primary {
+        margin-top: 30px;
+        width: 100%;
+        background: #ffb700;
+        height: 50px;
+        border-radius: 10px;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__btn-secondary {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        width: 100%;
+        height: 50px;
+        border: 1px solid #d2d1d6;
+        border-radius: 10px;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__error-text {
+        margin-top: -18px;
+        color: rgb(232, 107, 107);
+        font-style: italic;
+        font-size: 1.3rem;
+        font-weight: 600;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 0.3s;
+    }
+
+    &__error-text.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-checkbox:has(:checked) {
+    .form-checkbox__box::before {
+        background: #ffb700;
+    }
+    .form-checkbox__box::after {
+        display: block;
+    }
+}

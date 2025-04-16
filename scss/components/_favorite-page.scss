@@ -1,0 +1,68 @@
+@use "../abstracts";
+
+.favorite__products {
+    .checkout__product-info {
+        justify-content: center;
+    }
+
+    .checkout__product-info-row {
+        justify-content: start;
+        gap: 30px;
+    }
+    &-btn {
+        padding: 7px 20px;
+        border-radius: 9999px;
+        margin-left: auto;
+
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        @include abstracts.screen(xxl) {
+            margin-top: 20px;
+            width: min(200px, 100%)
+        }
+
+        @include abstracts.screen(lg) {
+            font-size: 2rem;
+            width: 100%;
+        }
+    }
+
+    &-heading {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+    &-subheading {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
+}
+
+.favorite__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+
+    &-btn {
+        padding: 10px 30px;
+        gap: 10px;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+        border-radius: 999px;
+
+        @include abstracts.screen(xxl) {
+            font-size: 2rem;
+            width: 300px;
+        }
+    }
+}

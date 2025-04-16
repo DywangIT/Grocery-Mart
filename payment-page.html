@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment | Grocery Mart</title>
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/tabzi@v1.0.0/tabzi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="header"></header>
+    <script>load("#header", "./templates/header-logined.html");</script>
+    <!-- Main -->
+    <main class="product-page checkout-page">
+        <div class="container">
+            <!-- product-container -->
+            <div class="product-container">
+                <!-- Search box -->
+                <div class="product-search d-none d-md-flex">
+                    <input type="text" class="product-search__input" placeholder="Search for item" />
+                    <button class="product-search__button">
+                        <img src="./assets/icons/search.svg" alt="" />
+                    </button>
+                </div>
+
+                <!-- Breadcumbs -->
+                <ul class="breadcumbs">
+                    <li>
+                        <a href="./home.html" class="breadcumbs__link">Home
+                            <img src="./assets/icons/arrow-right.svg" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./checkout-page.html" class="breadcumbs__link">Checkout
+                            <img src="./assets/icons/arrow-right.svg" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="./shipping-page.html" class="breadcumbs__link">Shipping
+                            <img src="./assets/icons/arrow-right.svg" alt="" /></a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="breadcumbs__link breadcumbs__link--current">Payment method</a>
+                    </li>
+                </ul>
+
+                <!-- Checkout -->
+                <section class="checkout row gy-lg-3">
+                    <div class="col-8 col-lg-12">
+                        <div class="checkout__products checkout-shipping">
+                            <!--  -->
+                            <div class="checkout-shipping__header">
+                                <h2 class="checkout-shipping__title shipping__title shipping-method__title">
+                                    1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                </h2>
+                                <button class="checkout-shipping__edit">
+                                    <img src="./assets/icons/pencil.svg" alt="" class="icon">
+                                    <span>Edit</span>
+                                </button>
+                            </div>
+
+                            <label class="checkout-shipping__address-card checkout-shipping-row">
+                                <div class="checkout-shipping__recipient">
+                                    <strong class="checkout-shipping__name">Imran Khan</strong>
+                                    <p class="checkout-shipping__address">
+                                        Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                                    </p>
+                                </div>
+                                <div class="checkout-shipping__status">
+                                    <input type="checkbox" class="checkout-shipping__checkbox" />
+                                </div>
+                            </label>
+
+                            <div class="checkout-shipping__items-summary checkout-shipping-row">
+                                <div class="checkout-shipping__items">
+                                    <p class="checkout-shipping__items-label">Items details</p>
+                                    <p class="checkout-shipping__items-count">2 items</p>
+                                </div>
+                                <a href="#" class="checkout-shipping__details-link">View details</a>
+                            </div>
+                            <!--  -->
+                        </div>
+
+                        <section class="checkout__products shipping-method">
+                            <h2 class="shipping-method__title">2. Shipping method</h2>
+                            <div class="checkout-divider"></div>
+                            <p class="shipping-method__subtitle">Available Shipping method</p>
+
+                            <div class="shipping-method__list">
+                                <label class="shipping-method__option shipping-method__option--selected">
+                                    <div class="shipping-method__info">
+                                        <img src="./assets/imgs/fedex.png" alt="FedEx" class="shipping-method__logo" />
+                                        <div>
+                                            <p class="shipping-method__name">Fedex Delivery</p>
+                                            <p class="shipping-method__desc">Delivery: 2–3 days work</p>
+                                        </div>
+                                    </div>
+                                    <div class="shipping-method__meta">
+                                        <span class="shipping-method__price">Free</span>
+                                        <div class="checkout-shipping__status">
+                                            <input type="checkbox" class="checkout-shipping__checkbox" />
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <label class="shipping-method__option">
+                                    <div class="shipping-method__info">
+                                        <img src="./assets/imgs/dhl.png" alt="DHL" class="shipping-method__logo" />
+                                        <div>
+                                            <p class="shipping-method__name">DHL Delivery</p>
+                                            <p class="shipping-method__desc">Delivery: 2–3 days work</p>
+                                        </div>
+                                    </div>
+                                    <div class="shipping-method__meta">
+                                        <span class="shipping-method__price">$12.00</span>
+                                        <div class="checkout-shipping__status">
+                                            <input type="checkbox" class="checkout-shipping__checkbox" />
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div class="col-4 col-lg-12">
+                        <div class="checkout-summary">
+                            <!-- Summary Items -->
+                            <section class="payment">
+                                <h2 class="payment__title">Payment Details</h2>
+                                <p class="payment__desc">
+                                    Complete your purchase item by providing your payment details order.
+                                </p>
+
+                                <div class="payment__group">
+                                    <label for="email" class="payment__label">Email Address</label>
+                                    <input type="email" id="email" class="payment__input"
+                                        placeholder="example@gmail.com" />
+                                </div>
+
+                                <div class="payment__group">
+                                    <label for="card-holder" class="payment__label">Card Holder</label>
+                                    <input type="text" id="card-holder" class="payment__input"
+                                        placeholder="example@gmail.com" />
+                                </div>
+
+                                <div class="payment__group">
+                                    <label for="card-number" class="payment__label">Card Details</label>
+                                    <input type="text" id="card-number" class="payment__input"
+                                        placeholder="example@gmail.com" />
+                                    <div class="payment__details payment__input">
+                                        <input type="text" class="" placeholder="MM/YY" />
+                                        <div class="payment-divider"></div>
+                                        <input type="text" class="" placeholder="CVC" />
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- =========================================== -->
+                            <div class="checkout-summary__list">
+                                <div class="checkout-summary__row">
+                                    <span class="checkout-summary__label">Subtotal <span
+                                            class="checkout-summary__sub">(items)</span></span>
+                                    <span class="checkout-summary__value">3</span>
+                                </div>
+                                <div class="checkout-summary__row">
+                                    <span class="checkout-summary__label">Price <span
+                                            class="checkout-summary__sub">(Total)</span></span>
+                                    <span class="checkout-summary__value">$191.65</span>
+                                </div>
+                                <div class="checkout-summary__row">
+                                    <span class="checkout-summary__label">Shipping</span>
+                                    <span class="checkout-summary__value">$10.00</span>
+                                </div>
+                                <div class="checkout-divider"></div>
+                                <div class="checkout-summary__row checkout-summary__row--total">
+                                    <span class="checkout-summary__label">Estimated Total</span>
+                                    <span class="checkout-summary__value">$201.65</span>
+                                </div>
+                            </div>
+                            <div class="payment-summary__footer">
+                                <a href="#!" class="payment__footer-btn shipping__footer-btn primary-btn">Pay $465.98</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>load("#footer", "./templates/footer.html")</script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        document.querySelectorAll(".checkout__brand-dropdown").forEach((dropdown) => {
+            const selected = dropdown.querySelector(".checkout__brand-selected");
+            const label = dropdown.querySelector(".checkout__brand-label");
+            const items = dropdown.querySelectorAll(".checkout__brand-item");
+
+            selected.onclick = () => {
+                dropdown.classList.toggle("open");
+            };
+
+            items.forEach((item) => {
+                item.onclick = () => {
+                    label.textContent = item.textContent;
+                    dropdown.classList.remove("open");
+                };
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove("open");
+                }
+            });
+        });
+        // checkbox
+        document.addEventListener("DOMContentLoaded", function () {
+            const addressCards = document.querySelectorAll(".address-card");
+
+            addressCards.forEach((card) => {
+                const checkbox = card.querySelector(".address-card__checkbox");
+
+                checkbox.addEventListener("change", function () {
+                    if (this.checked) {
+                        // Bỏ chọn tất cả các checkbox khác
+                        addressCards.forEach((otherCard) => {
+                            const otherCheckbox = otherCard.querySelector(".address-card__checkbox");
+                            if (otherCheckbox !== this) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
+        // open shipping form
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const shippingForm = new Mozi({
+        //         templateId: 'shipping-form-template',
+        //         footer: false,
+        //         destroyOnClose: true,
+        //         closeMethods: ['overlay', 'x', 'escape'],
+        //         cssClass: ['custom-class-1', 'custom-class-2']
+        //     });
+        //     const shippingButton = document.querySelector('.shipping__add-address-button');
+        //     shippingButton.addEventListener('click', function () {
+        //         shippingForm.open();
+        //     });
+        // })
+
+
+        // shipping methods checkbox
+        document.addEventListener("DOMContentLoaded", function () {
+            const addressCards = document.querySelectorAll(".shipping-method__option");
+
+            addressCards.forEach((card) => {
+                const checkbox = card.querySelector(".checkout-shipping__checkbox");
+
+                checkbox.addEventListener("change", function () {
+                    if (this.checked) {
+                        // Bỏ chọn tất cả các checkbox khác
+                        addressCards.forEach((otherCard) => {
+                            const otherCheckbox = otherCard.querySelector(".checkout-shipping__checkbox");
+                            if (otherCheckbox !== this) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

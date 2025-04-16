@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | Grocery Mart</title>
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/slidezi@v1.0.2/slidezi.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.delivr.net/gh/DywangIT/slidezi@v1.0.2/slidezi.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+
+<body>
+    <main class="auth-container">
+        <div class="auth sign-in">
+            <div class="auth-intro d-md-none">
+                <a href="./" class="logo d-none d-md-flex">
+                    <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+                    <h1 class="logo__title">grocerymart</h1>
+                </a>
+                <img src="./assets/imgs/auth-intro-img.png" alt="" class="auth-intro__img" />
+                <div class="auth-intro__desc">
+                    The best of luxury brand values, high quality products,
+                    and innovative services
+                </div>
+                <img src="./assets/icons/navigate_to_signup.svg" alt="" class="auth-intro__nav d-none d-md-block"
+                    id="auth-intro__nav" />
+            </div>
+            <div class="auth-content">
+                <div class="auth-content__inner">
+                    <div class="auth-content__logo">
+                        <a href="./" class="logo">
+                            <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+                            <h1 class="logo__title">grocerymart</h1>
+                        </a>
+                    </div>
+                    <div class="auth-content__heading">Hello Again!</div>
+                    <div class="auth-content__desc">
+                        Welcome back to sign in. As a returning customer, you have access to your previously saved all
+                        information.
+                    </div>
+                    <div class="auth-content__form form">
+                        <div class="user-input">
+                            <input type="text" placeholder="Email" id="email" />
+                            <img src="./assets/icons/signin-email.svg" alt="" />
+                        </div>
+                        <p id="emailError" class="form__error-text">
+                            Invalid email!
+                        </p>
+                        <div class="user-input">
+                            <input type="password" placeholder="Password" id="password" />
+                            <img src="./assets/icons/signin-lock.svg" alt="" />
+                        </div>
+                        <p id="passwordError" class="form__error-text">
+                            Password must have at least 8 characters,
+                            including uppercase, lowecase, numbers, and
+                            special characters!
+                        </p>
+                        <div class="form-input__row">
+                            <label class="form-checkbox">
+                                <input type="checkbox" class="form-checkbox__box" />
+                                <span class="form-checkbox__desc">Set as default card</span>
+                            </label>
+                            <a href="./forgot-password-page.html" class="form-link">Forgot Password</a>
+                        </div>
+                        <button class="form__btn-primary" id="cf-signup">Login</button>
+                        <button class="form__btn-secondary">
+                            <img class="icon" src="./assets/icons/signin-google.svg" alt="" />
+                            <span>Sign in with Gmail</span>
+                        </button>
+                    </div>
+                    <div class="auth-content__footer">
+                        <span class="auth-content__footer-text">Don’t have an account yet?</span>
+                        <a href="./signup-page.html" class="auth-content__footer-link">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

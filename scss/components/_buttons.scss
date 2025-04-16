@@ -1,6 +1,7 @@
 .filter-btn {
+    height: 36px;
+    padding: 0 12px;
     display: flex;
-    padding: 6px 12px;
     align-items: center;
     gap: 14px;
     border-radius: 6px;
@@ -21,4 +22,28 @@
     height: 50px;
     background: var(--like-btn-bg);
     box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+}
+
+.primary-btn, .text-btn, .outline-btn, .normal-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-btn {
+    background: #FFB700;
+    color: #1a162e;
+}
+
+.text-btn {
+    color: #9E9DA8;
+}
+
+.outline-btn {
+    border: 1px solid #D2D1D6;
+}
+
+.normal-btn {
+    background: #F8F8FB;
+    color: #9E9DA8;
 }

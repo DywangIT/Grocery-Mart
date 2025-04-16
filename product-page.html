@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product | Grocery Mart</title>
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/tabzi@v1.0.0/tabzi.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="header"></header>
+    <script>load("#header", "./templates/header.html")</script>
+    <!-- Main -->
+    <main class="product-page">
+        <div class="container">
+            <!-- product-container -->
+            <div class="product-container">
+                <!-- Search box -->
+                <div class="product-search d-none d-md-flex">
+                    <input type="text" class="product-search__input" placeholder="Search for item" />
+                    <button class="product-search__button">
+                        <img src="./assets/icons/search.svg" alt="" />
+                    </button>
+                </div>
+
+                <!-- Breadcumbs -->
+                <ul class="breadcumbs">
+                    <li>
+                        <a href="#!" class="breadcumbs__link">Departments
+                            <img src="./assets/icons/arrow-right.svg" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="breadcumbs__link">Coffee
+                            <img src="./assets/icons/arrow-right.svg" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="breadcumbs__link">Coffee Beans
+                            <img src="./assets/icons/arrow-right.svg" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="breadcumbs__link breadcumbs__link--current">LavAzza
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- product -->
+                <div class="product row">
+                    <div class="col col-5 col-xxl-4 col-lg-12">
+                        <div class="product-image-gallery">
+                            <div class="product-image-gallery__main"></div>
+
+                            <div class="product-image-gallery__thumbnails">
+                                <img src="./assets/imgs/product/item 1.png" alt="Thumbnail 2"
+                                    class="image-gallery__thumbnail" />
+                                <img src="./assets/imgs/product/item 2.png" alt="Thumbnail 3"
+                                    class="image-gallery__thumbnail" />
+                                <img src="./assets/imgs/product/item 3.png" alt="Thumbnail 4"
+                                    class="image-gallery__thumbnail" />
+                                <img src="./assets/imgs/product/item 4.png" alt="Thumbnail 5"
+                                    class="image-gallery__thumbnail" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-7 col-xxl-8 col-lg-12">
+                        <div class="product__details">
+                            <h2 class="product__title">
+                                Coffee Beans - Espresso Arabica and Robusta
+                                Beans
+                            </h2>
+                            <dic class="product__details-items row gx-4">
+                                <div class="product__details-item col-5 col-xl-6 col-lg-12">
+                                    <div class="product__rating">
+                                        <span class="product__star">⭐</span>
+                                        <span class="product__score">(3.5)</span>
+                                        <span class="product__reviews">1100 reviews</span>
+                                    </div>
+
+                                    <div class="product__options">
+                                        <label for="product-size" class="product__label">Size/Weight</label>
+                                        <div class="product__selectors">
+                                            <select id="product-size" class="product__select">
+                                                <option value="500g">
+                                                    500g
+                                                </option>
+                                                <option value="500g">
+                                                    400g
+                                                </option>
+                                                <option value="500g">
+                                                    300g
+                                                </option>
+                                                <option value="500g">
+                                                    200g
+                                                </option>
+                                            </select>
+                                            <div class="product__selector-separate"></div>
+                                            <select class="product__select">
+                                                <option value="gram">
+                                                    Gram
+                                                </option>
+                                                <option value="gram">
+                                                    Kg
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="product__size-buttons">
+                                            <button class="product__size-button product__size-button--small">
+                                                Small
+                                            </button>
+                                            <button class="product__size-button product__size-button--medium">
+                                                Medium
+                                            </button>
+                                            <button class="product__size-button product__size-button--large">
+                                                Large
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product__details-item col-7 col-xl-6 col-lg-12 gy-lg-3">
+                                    <div class="product__availability">
+                                        <div class="product__compare">
+                                            <img src="./assets/icons/product-details-icon1.svg" class="icon" alt="" />
+                                            <p>Compare</p>
+                                        </div>
+                                        <div class="product__delivery">
+                                            <img src="./assets/icons/product-details-icon2.svg" class="icon" alt="" />
+                                            <p>
+                                                Delivery<br /><small>From $6 for 1–3
+                                                    days</small>
+                                            </p>
+                                        </div>
+                                        <div class="product__pickup product__pickup--unavailable">
+                                            <img src="./assets/icons/product-details-icon3.svg" class="icon" alt="" />
+                                            <p>
+                                                Pickup<br /><small>Out of 2 store,
+                                                    today</small>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__purchase">
+                                        <div class="product__price-info">
+                                            <div class="product__price-row">
+                                                <span class="product__original-price">$500.00</span>
+                                                <span class="product__discount">10%</span>
+                                            </div>
+                                            <span class="product__final-price">$540.00</span>
+                                        </div>
+                                        <div class="product__price-row">
+                                            <button class="product__add-to-cart primary-btn">
+                                                Add to cart
+                                            </button>
+                                            <button class="product__wishlist">
+                                                <img src="./assets/icons/heart.svg" alt="" class="icon" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dic>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product-tabs -->
+            <nav class="product-tabs">
+                <ul class="product-tabs__list" id="product-tabs">
+                    <li class="product-tabs__item">
+                        <a href="#product-description" class="product-tabs__button">Description</a>
+                    </li>
+                    <li class="product-tabs__item">
+                        <a href="#product-features" class="product-tabs__button">Features</a>
+                    </li>
+                    <li class="product-tabs__item">
+                        <a href="#product-review" class="product-tabs__button">Review (1100)</a>
+                    </li>
+                    <li class="product-tabs__item">
+                        <a href="#product-similar" class="product-tabs__button">Similar</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="product-tabs__contents">
+                <!-- product-description -->
+                <div class="product-description" id="product-description">
+                    DESCRIPTION
+                </div>
+                <!-- product-features -->
+                <div class="product-features" id="product-features">
+                    FEATURES
+                </div>
+                <!-- product-preview -->
+                <div class="product-review" id="product-review">
+                    <h3 class="product-review__title">
+                        What our customers are saying
+                    </h3>
+
+                    <div class="product-review__list row row-cols-3 gx-xl-2 gy-md-2">
+                        <div class="col col-md-12">
+                            <div class="product-review__card">
+                                <div class="product-review__buyer">
+                                    <div>
+                                        <img src="./assets/imgs/avatar.jpg" alt="Jakir Hussen"
+                                            class="product-review__avatar" />
+                                    </div>
+                                    <div>
+                                        <h4 class="product-review__name">
+                                            Jakir Hussen
+                                        </h4>
+                                        <p class="product-review__comment line-clamp">
+                                            Great product, I love this
+                                            Coffee Beans
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product-review__rating">
+                                    <div class="product-review__stars">
+                                        ⭐ ⭐ ⭐ ⭐ ☆
+                                    </div>
+                                    <span class="product-review__score">(3.5)</span>
+                                    <span class="product-review__label">Review</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-12">
+                            <div class="product-review__card">
+                                <div class="product-review__buyer">
+                                    <div>
+                                        <img src="./assets/imgs/avatar.jpg" alt="Jubed Ahmed"
+                                            class="product-review__avatar" />
+                                    </div>
+                                    <div>
+                                        <h4 class="product-review__name">
+                                            Jubed Ahmed
+                                        </h4>
+                                        <p class="product-review__comment line-clamp">
+                                            Awesome Coffee, I love this
+                                            Coffee Beans
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product-review__rating">
+                                    <div class="product-review__stars">
+                                        ⭐ ⭐ ⭐ ⭐ ☆
+                                    </div>
+                                    <span class="product-review__score">(3.5)</span>
+                                    <span class="product-review__label">Review</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-12">
+                            <div class="product-review__card">
+                                <div class="product-review__buyer">
+                                    <div>
+                                        <img src="./assets/imgs/avatar.jpg" alt="Delwar Hussain"
+                                            class="product-review__avatar" />
+                                    </div>
+                                    <div>
+                                        <h4 class="product-review__name">
+                                            Delwar Hussain
+                                        </h4>
+                                        <p class="product-review__comment line-clamp">
+                                            Great product, I like this
+                                            Coffee Beans
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product-review__rating">
+                                    <div class="product-review__stars">
+                                        ⭐ ⭐ ⭐ ⭐ ☆
+                                    </div>
+                                    <span class="product-review__score">(3.5)</span>
+                                    <span class="product-review__label">Review</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product-similar -->
+                <div class="product-similar" id="product-similar">
+                    SIMILAR
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>load("#footer", "./templates/footer.html")</script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

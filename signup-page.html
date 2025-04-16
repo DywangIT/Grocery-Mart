@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up | Grocery Mart</title>
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/slidezi@v1.0.2/slidezi.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.delivr.net/gh/DywangIT/slidezi@v1.0.2/slidezi.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+
+<body>
+    <main class="auth-container">
+        <div class="auth">
+            <div class="auth-intro">
+                <a href="./" class="logo d-none d-md-flex">
+                    <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+                    <h1 class="logo__title">grocerymart</h1>
+                </a>
+                <img src="./assets/imgs/auth-intro-img.png" alt="" class="auth-intro__img" />
+                <div class="auth-intro__desc">
+                    The best of luxury brand values, high quality products,
+                    and innovative services
+                </div>
+                <img src="./assets/icons/navigate_to_signup.svg" alt="" class="auth-intro__nav d-none d-md-block"
+                    id="auth-intro__nav" />
+            </div>
+            <div class="auth-content">
+                <img src="./assets/icons/arrow-left.svg" alt="" class="icon d-none d-md-block auth-content__arrow"
+                    id="auth-content__arrow" />
+                <div class="auth-content__inner">
+                    <div class="auth-content__logo">
+                        <a href="./" class="logo">
+                            <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+                            <h1 class="logo__title">grocerymart</h1>
+                        </a>
+                    </div>
+                    <div class="auth-content__heading">Sign Up</div>
+                    <div class="auth-content__desc">
+                        Let’s create your account and Shop like a pro and
+                        save money.
+                    </div>
+                    <div class="auth-content__form form">
+                        <div class="user-input">
+                            <input type="text" placeholder="Email" id="email" />
+                            <img src="./assets/icons/signin-email.svg" alt="" />
+                        </div>
+                        <p id="emailError" class="form__error-text">
+                            Invalid email!
+                        </p>
+                        <div class="user-input">
+                            <input type="password" placeholder="Password" id="password" />
+                            <img src="./assets/icons/signin-lock.svg" alt="" />
+                        </div>
+                        <p id="passwordError" class="form__error-text">
+                            Password must have at least 8 characters,
+                            including uppercase, lowecase, numbers, and
+                            special characters!
+                        </p>
+                        <div class="user-input">
+                            <input type="password" placeholder="Confirm Password" id="confirm-password" />
+                            <img src="./assets/icons/signin-lock.svg" alt="" />
+                        </div>
+                        <p id="cfPasswordError" class="form__error-text">
+                            Password do not match!
+                        </p>
+                        <div class="form-input__row">
+                            <label class="form-checkbox">
+                                <input type="checkbox" class="form-checkbox__box" />
+                                <span class="form-checkbox__desc">Set as default card</span>
+                            </label>
+                            <a href="./forgot-password-page.html" class="form-link">Forgot Password</a>
+                        </div>
+                        <button class="form__btn-primary" id="cf-signup">Sign Up</button>
+                        <button class="form__btn-secondary">
+                            <img class="icon" src="./assets/icons/signin-google.svg" alt="" />
+                            <span>Sign in with Gmail</span>
+                        </button>
+                    </div>
+                    <div class="auth-content__footer">
+                        <span class="auth-content__footer-text">You have an account yet?</span>
+                        <a href="./signin-page.html" class="auth-content__footer-link">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const auth = $(".auth"); // Lấy phần tử chứa toàn bộ giao diện auth
+            auth.style.transition = ".3s"; // Thêm hiệu ứng chuyển động
+
+            $("#auth-intro__nav").onclick = () => {
+                // Chuyển sang màn nhập thông tin đăng nhập
+                auth.style.transform = "translate(-50%)";
+            };
+
+            $("#auth-content__arrow").onclick = () => {
+                // Quay lại màn giới thiệu
+                auth.style.transform = "translate(0)";
+            };
+        });
+
+    </script>
+</body>
+
+</html>

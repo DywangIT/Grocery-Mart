@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Grocery Mart</title>
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/tabzi@v1.0.0/tabzi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="header"></header>
+    <script>load("#header", "./templates/header-logined.html");</script>
+    <!-- Main -->
+    <main class="profile-page">
+        <div class="container">
+            <!-- Search box -->
+            <div class="product-search d-none d-md-flex">
+                <input type="text" class="product-search__input" placeholder="Search for item" />
+                <button class="product-search__button">
+                    <img src="./assets/icons/search.svg" alt="" />
+                </button>
+            </div>
+            <div class="profile row gx-lg-2">
+                <!--  -->
+                <div class=" col-3 col-lg-4 col-md-12">
+                    <aside class="sidebar">
+                        <div class="sidebar__profile">
+                            <div class="sidebar__avatar">
+                                <img src="https://c4.wallpaperflare.com/wallpaper/459/87/740/cat-glasses-space-abstract-wallpaper-thumb.jpg"
+                                    alt="Imran Khan" class="sidebar__avatar-img" />
+                            </div>
+                            <div class="sidebar__info">
+                                <h2 class="sidebar__name">Imran Khan</h2>
+                                <p class="sidebar__date">Registered: 17th May 2022</p>
+                            </div>
+                            <div class="sidebar__profile-overlay"> </div>
+                        </div>
+                        <div class="sidebar__container">
+
+                            <nav class="sidebar__section">
+                                <h3 class="sidebar__title">Manage Account</h3>
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                src="./assets/icons/profile-icon/profile.svg" alt="" class="icon"></div>
+                                        <a href="./personal-info-page.html" class="sidebar__link">Personal info</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                src="./assets/icons/profile-icon/location.svg" alt="" class="icon"></div>
+                                        <a href="#" class="sidebar__link">Addresses</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                src="./assets/icons/profile-icon/message.svg" alt="" class="icon"></div>
+                                        <a href="#" class="sidebar__link">Communications &amp; privacy</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <nav class="sidebar__section">
+                                <h3 class="sidebar__title">My items</h3>
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon"
+                                                src="./assets/icons/profile-icon/download.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Reorder</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon" src="./assets/icons/profile-icon/heart.svg"
+                                                alt=""></div>
+                                        <a href="./favorite-page.html" class="sidebar__link">Lists</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img class="icon" src="./assets/icons/profile-icon/gift.svg"
+                                                alt=""></div>
+                                        <a href="#" class="sidebar__link">Registries</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <nav class="sidebar__section">
+                                <h3 class="sidebar__title">Subscriptions &amp; plans</h3>
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                class="icon" src="./assets/icons/profile-icon/shielddone.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Protection plans</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <nav class="sidebar__section">
+                                <h3 class="sidebar__title">Customer Service</h3>
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                class="icon" src="./assets/icons/profile-icon/infosquare.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Help</a>
+                                    </li>
+                                    <li class="sidebar__item">
+                                        <div class="sidebar__item-img"><img
+                                                class="icon" src="./assets/icons/profile-icon/dangercircle.svg" alt=""></div>
+                                        <a href="#" class="sidebar__link">Terms of Use</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
+                </div>
+                <!--  -->
+                <div class="col-9 col-lg-8 col-md-12  gy-md-2">
+                    <section class="wallet">
+                        <dic class="wallet__header">
+                            <h2 class="wallet__title">My Wallet</h2>
+                            <p class="wallet__subtitle">Payment methods</p>
+                        </dic>
+
+                        <div class="wallet__cards">
+                            <div class="wallet__card">
+                                <img src="./assets/imgs/creditcard1.png" alt="">
+                            </div>
+
+                            <div class="wallet__card">
+                                <img src="./assets/imgs/creditcard2.png" alt="">
+                            </div>
+
+                            <a href="./add-new-card-page.html" class="wallet__card wallet__card--add">
+                                <img src="./assets/icons/plusbtn.svg" alt="" class="icon">
+                                <p class="wallet__add-text">Add New Card</p>
+                            </a>
+                        </div>
+
+                        <div class="account">
+                            <div class="account__header">
+                                <h3 class="account__title">Account info</h3>
+                                <p class="account__subtitle">Addresses, contact information and password</p>
+                            </div>
+
+                            <div class="account__info row gy-2 gx-2">
+                                <div class="col-6 col-lg-12">
+                                    <div class="account__field">
+                                        <div class="account__icon">
+                                            <img src="./assets/icons/profile-icon/message.svg" alt="" class="icon">
+                                        </div>
+                                        <a href="mailto:dyquang5083@gmail.com">
+                                            <p class="account__label">Email Address</p>
+                                            <p class="account__value">tarek97.ta@gmail.com</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-12">
+                                    <div class="account__field">
+                                        <div class="account__icon">
+                                            <img src="./assets/icons/profile-icon/phone.svg" alt="" class="icon">
+                                        </div>
+                                        <a href="tel:+84325509336">
+                                            <p class="account__label">Phone number</p>
+                                            <p class="account__value">+000 11122 2345 657</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-12">
+                                    <div class="account__field">
+                                        <div class="account__icon">
+                                            <img src="./assets/icons/profile-icon/location.svg" alt="" class="icon">
+                                        </div>
+                                        <a href="#!">
+                                            <p class="account__label">Add an address</p>
+                                            <p class="account__value">Bangladesh Embassy, Washington, DC 20008</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list">
+                            <div class="list__header">
+                                <h3 class="list__title">Lists</h3>
+                                <p class="list__subtitle">2 items – Primary</p>
+                            </div>
+
+                            <div class="list__items">
+                                <div class="list__item">
+                                    <img src="./assets/imgs/product/item 1.png" alt="Coffee Beans" class="list__img" />
+                                    <div class="list__info">
+                                        <p class="list__name">Coffee Beans - Espresso Arabica and Robusta Beans</p>
+                                        <div class="list__price-row">
+                                            <span class="list__price">$47.00</span>
+                                            <button class="list__btn primary-btn">Add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-divider"></div>
+                                <div class="list__item">
+                                    <img src="./assets/imgs/product/item 1.png" alt="Lavazza Coffee"
+                                        class="list__img" />
+                                    <div class="list__info">
+                                        <p class="list__name">Lavazza Coffee Blends - Try the Italian Espresso</p>
+                                        <div class="list__price-row">
+                                            <span class="list__price">$53.00</span>
+                                            <button class="list__btn primary-btn">Add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- =============================== -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>load("#footer", "./templates/footer.html")</script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

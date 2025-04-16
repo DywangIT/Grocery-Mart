@@ -2,7 +2,8 @@
 
 html.dark {
     --text-color: #fff;
-    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7473%) hue-rotate(113deg) brightness(108%) contrast(94%);
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(7473%) hue-rotate(113deg) brightness(108%) contrast(94%);
 
     --body-bg: #292e39;
     --header-bg-color: #171c28;
@@ -10,11 +11,11 @@ html.dark {
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --dropdown-bg-color: #2f3441;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-    --dropdown-filter-color: brightness(0) saturate(100%) invert(18%) sepia(23%) saturate(466%) hue-rotate(185deg) brightness(98%)
-        contrast(93%);
+    --dropdown-filter-color: brightness(0) saturate(100%) invert(18%) sepia(23%)
+        saturate(466%) hue-rotate(185deg) brightness(98%) contrast(93%);
     --top-menu-border-color: #171c28;
-    --menu-column-icon-color: brightness(0) saturate(100%) invert(96%) sepia(1%) saturate(1251%) hue-rotate(202deg) brightness(102%)
-        contrast(97%);
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(96%) sepia(1%)
+        saturate(1251%) hue-rotate(202deg) brightness(102%) contrast(97%);
     --menu-column-heading-color: #b9babe;
     --menu-column-link-color: #b9babe;
     // sidebar
@@ -30,15 +31,83 @@ html.dark {
     // filter
     --filter-btn-bg: #171c28;
     --filter-btn-color: #fff;
+    --filter-bg-color: #2f3441;
+    --filter-shadow-color: rgba(0, 0, 0, 0.4);
+    --filter-tag-color: #171c28;
+    --filter-slider-color: #292e39;
 
     // product-card
     --product-card-shadow: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
     --product-card-bg: #171c28;
     --product-card-title-color: #fff;
+
     // like-btn
     --like-btn-bg: #292e39;
 
+    // sign up page
+    --auth-text-color: #b9babe;
+    --auth-intro-bg-color: #171c28;
+    --user-input-border-color: #b9babe;
+    --signup-logo-color: #fff;
+    --signup-content-color: #292e39;
+
+    // form
+    --form-input-color: #fff;
+
+    // product-page
+    --product-page--bg-color: #292e39;
+    --breadcumbs-bg-color: #171c28;
+    --breadcumbs-shadow-color: rgba(23, 28, 40, 0.2);
+    --product-details-bg-color: #171c28;
+    --product-title-color: #eee;
+    --product-selectors-border-color: #9e9da8;
+    --product__size--button-bg-color: #292e39;
+    --product__availability-color: #eee;
+    --product-preview__card-bg-color: #171c28;
+
+    // product cart
+    --product-cart-bg-color: #292e39;
+    --product-cart-arrow-filter-color: brightness(0) saturate(100%) invert(14%)
+        sepia(11%) saturate(1227%) hue-rotate(183deg) brightness(95%)
+        contrast(88%);
+    --product-cart-shadow-color: rgba(23, 28, 40, 0.4);
+    --product-cart-separator-color: #171c28;
+    --product-cart-text-color: #b9babe;
+
+    // checkout page
+    --checkout-page-bg-color: #292e39;
+    --checkout-page-element-bg-color: #171c28;
+    --checkout-page-element-shadow-color: rgba(23, 28, 40, 0.2);
+    --checkout-page-breadcumbs-bg-color: #171c28;
+    --checkout-text-color: #b9babe;
+    --checkout-page-divider-color: #292e39;
+    --checkout-gift-box-bg-color: #292e39;
+    --checkout-brand-dropdown-bg-color: rgba(23 28 40 / 0.8);
+
+    // payment page
+    --payment-item-bg-color: #292e39;
+    --input-playholder-color: #b9babe;
+
+    // Profile page
+    --element-block-bg-color: #171c28;
+    --element-block-shadow-color: rgba(23, 28, 40, 0.2);
+    --profile-shadow-color: transparent;
+    --profile-input-border-color: #292e39;
+    --card-form-checkbox-content: url(../../assets/icons/checkedbox.svg);
+    --card-form-input-border-md-color: #b9babe;
+
+    // user menu
+    --user-menu-divider: #5a5a5a;
+    --user-menu-shadow-color: rgba(255 255 255 / 0.2);
+
     @include abstracts.screen(lg) {
+        --product-page--bg-color: #292e39;
+        --breadcumbs-bg-color: #171c28;
+        --product-details-bg-color: #171c28;
         --header-shadow-color: rgba(0, 0, 0, 0.2);
+    }
+
+    @include abstracts.screen(md) {
+        --auth-intro-bg-color: #171c28;
     }
 }

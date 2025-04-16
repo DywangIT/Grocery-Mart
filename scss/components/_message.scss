@@ -1,0 +1,31 @@
+.message {
+    background: #ddd;
+    padding: 10px 10px;
+    width: fit-content;
+    border-radius: 3px;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    &--success {
+        background: rgba(161, 255, 208, 0.698);
+    }
+
+    &--error {
+        background: rgba(255, 161, 161, 0.698);
+    }
+    &--warning {
+        background: rgba(255, 255, 161, 0.698);
+    }
+
+    &.show {
+        transform: translateX(0);
+        opacity: 1;
+        transition: transform, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        visibility: visible;
+    }
+}

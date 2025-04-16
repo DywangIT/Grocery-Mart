@@ -1,0 +1,143 @@
+@use "../abstracts";
+
+.footer {
+    padding: 60px 0;
+}
+
+.footer-row:first-child {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    @include abstracts.screen(xxl) {
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    }
+
+    @include abstracts.screen(xl) {
+        grid-template-columns: 1fr 1.2fr;
+        grid-template-rows: auto auto;
+    }
+
+    @include abstracts.screen(md) {
+        grid-template: repeat(4, auto) / 1fr;
+    }
+}
+
+.footer-content {
+    color: var(--cate-item-desc-color);
+    line-height: 150%;
+
+    &__tagline {
+        margin: 5px 0 20px;
+        font-size: 2rem;
+    }
+
+    &__desc {
+        margin: 20px 0;
+    }
+
+    &__heading {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    > a:not(.logo) {
+        display: block;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__contact img {
+        width: 30px;
+    }
+
+    .logo {
+        &__img {
+            width: 60px;
+        }
+        &__title {
+            font-size: 3rem;
+        }
+
+        @include abstracts.screen(xl) {
+            margin-left: 0;
+        }
+    }
+}
+
+.footer-form {
+    &__input {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        width: 100%;
+        margin: 20px 0;
+        padding: 10px 16px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+    &__icon {
+        width: 20px;
+    }
+    &__text {
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__btn {
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+    }
+}
+
+.footer-separate {
+    height: 1px;
+    width: 100%;
+    margin: 30px 0;
+    background: #1A162E;
+}
+
+.footer-row:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    &::before {
+        content: "2025 © company.Ltd. All Right reserved";
+        position: absolute;
+        right: 0;
+
+        @include abstracts.screen(lg) {
+            right: initial;
+            bottom: -35px;
+        }
+    }
+}
+
+.footer-social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #1A162E;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 20px;
+    }
+}

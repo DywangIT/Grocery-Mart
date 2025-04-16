@@ -1,10 +1,10 @@
 @use "../abstracts";
 .home {
     &__container {
-        margin-top: 40px;
+        margin: 40px 0;
 
         @include abstracts.screen(md) {
-            margin-top: 30px;
+            margin: 30px 0;
         }
     }
 
@@ -13,30 +13,32 @@
         font-weight: 700;
         line-height: 141.667%;
     }
-
-    &__cate {
-        --grid-gutter-x: 51px;
-
-        @include abstracts.screen(xl) {
-            --grid-gutter-x: 30px;
+    &__cate-container {
+        margin-top: 40px;
+        .home__heading {
+            margin-bottom: 20px;
         }
+        .home__cate {
+            --grid-gutter-x: 51px;
 
-        @include abstracts.screen(lg) {
-            --grid-gutter-x: 24px;
-        }
+            @include abstracts.screen(xl) {
+                --grid-gutter-x: 30px;
+                --grid-gutter-y: 20px;
+            }
 
-        @include abstracts.screen(xl) {
-            --grid-gutter-y: 20px;
+            @include abstracts.screen(lg) {
+                --grid-gutter-x: 24px;
+            }
         }
     }
 
-    &__row {
+    &-products-row {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
     }
 
-    &__product {
-        margin-top: 20px;
+    &-products-container {
+        margin-top: 40px;
     }
 }

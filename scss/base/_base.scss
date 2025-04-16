@@ -28,6 +28,7 @@ button {
     background: transparent;
     padding: 0;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 button,
@@ -39,6 +40,24 @@ img {
     font-family: inherit;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    color: #fff;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important; /* Loại bỏ nền */
+    background-color: transparent !important; /* Đảm bảo nền trong suốt */
+    transition: background-color 5000s ease-in-out 0s; /* Ngăn nền thay đổi đột ngột */
 }
 
 .icon {
@@ -50,4 +69,23 @@ img {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+}
+
+input[type="range"] {
+    margin: 0;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+select {
+    background: inherit;
+}
+
+img {
+    display: block;
 }

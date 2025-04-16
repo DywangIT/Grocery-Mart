@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite | Grocery Mart</title>
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- script -->
+    <script src="./assets/js/script.js"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/tabzi@v1.0.0/tabzi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DywangIT/mozi@v1.0.3/mozi.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="header"></header>
+    <script>load("#header", "./templates/header-logined.html");</script>
+    <!-- Main -->
+    <main class="product-page checkout-page">
+        <div class="container">
+            <!-- product-container -->
+            <div class="product-container">
+                <!-- Search box -->
+                <div class="product-search d-none d-md-flex">
+                    <input type="text" class="product-search__input" placeholder="Search for item" />
+                    <button class="product-search__button">
+                        <img src="./assets/icons/search.svg" alt="" />
+                    </button>
+                </div>
+
+                <!-- Breadcumbs -->
+                <ul class="breadcumbs">
+                    <li>
+                        <a href="./home.html" class="breadcumbs__link">Home
+                            <img src="./assets/icons/arrow-right.svg" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="breadcumbs__link breadcumbs__link--current">Favorite</a>
+                    </li>
+                </ul>
+
+                <!-- Checkout -->
+                <div class="checkout__products favorite__products">
+                    <div class="favorite__products-header">
+                        <h3 class="favorite__products-heading">Favourite List</h3>
+                        <p class="favorite__products-subheading">3 items</p>
+                    </div>
+                    <div class="favorite__checkbox ">
+                        <input type="checkbox" class="checkout-shipping__checkbox favorite__products-checkall" />
+                    </div>
+                    <!-- Product Item -->
+                    <div class="checkout__product">
+                        <div class="favorite__checkbox ">
+                            <input type="checkbox" class="checkout-shipping__checkbox" />
+                        </div>
+                        <div class="checkout__product-image">
+                            <img src="./assets/imgs/product/item 4.png"
+                                alt="Coffee Beans - Espresso Arabica and Robusta Beans" />
+                        </div>
+                        <div class="checkout__product-info">
+                            <div class="checkout__product-info-row">
+                                <h3 class="checkout__product-name">
+                                    Coffee Beans - Espresso Arabica
+                                    and Robusta Beans
+                                </h3>
+                                <div class="checkout__product-total-price">
+                                    $47.00
+                                </div>
+                            </div>
+                            <div class="checkout__price-stock">
+                                <span class="checkout__price">$38.65</span>
+                                <span class="checkout__separator">|</span>
+                                <span class="checkout__stock checkout__stock--in">In Stock</span>
+                            </div>
+
+                            <div class="checkout__product-info-row d-xxl-block">
+                                <div class="checkout__product-controls">
+                                    <div class="checkout__product-brand">
+                                        <div class="checkout__brand-dropdown">
+                                            <div class="checkout__brand-selected">
+                                                <span class="checkout__brand-label">LavAzza</span>
+                                                <img src="./assets/icons/arrow-down.svg" alt="Arrow"
+                                                    class="checkout__brand-icon icon" />
+                                            </div>
+                                            <ul class="checkout__brand-list">
+                                                <li class="checkout__brand-item">LavAzza</li>
+                                                <li class="checkout__brand-item">Starbucks</li>
+                                                <li class="checkout__brand-item">Nestlé</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkout__product-quantity">
+                                        <button class="checkout__quantity-btn">
+                                            <img src="./assets/icons/minusBtn.svg" alt="" class="icon" />
+                                        </button>
+                                        <input type="text" value="1" class="checkout__quantity-input" />
+                                        <button class="checkout__quantity-btn">
+                                            <img src="./assets/icons/plusbtn.svg" alt="" class="icon" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="checkout__product-actions">
+                                    <button class="checkout__product-save">
+                                        <img src="./assets/icons/heart.svg" alt="">
+                                        <span>Save</span>
+                                    </button>
+                                    <button class="checkout__product-delete">
+                                        <img src="./assets/icons/bin.svg" alt="">
+                                        <span>Delete</span>
+                                    </button>
+                                </div>
+                                <div class="favorite__products-btn primary-btn">Check Out</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-divider"></div>
+                    <!-- Product Item -->
+                    <div class="checkout__product">
+                        <div class="favorite__checkbox ">
+                            <input type="checkbox" class="checkout-shipping__checkbox" />
+                        </div>
+                        <div class="checkout__product-image">
+                            <img src="./assets/imgs/product/item 4.png"
+                                alt="Coffee Beans - Espresso Arabica and Robusta Beans" />
+                        </div>
+                        <div class="checkout__product-info">
+                            <div class="checkout__product-info-row">
+                                <h3 class="checkout__product-name">
+                                    Coffee Beans - Espresso Arabica
+                                    and Robusta Beans
+                                </h3>
+                                <div class="checkout__product-total-price">
+                                    $47.00
+                                </div>
+                            </div>
+                            <div class="checkout__price-stock">
+                                <span class="checkout__price">$38.65</span>
+                                <span class="checkout__separator">|</span>
+                                <span class="checkout__stock checkout__stock--in">In Stock</span>
+                            </div>
+
+                            <div class="checkout__product-info-row d-xxl-block">
+                                <div class="checkout__product-controls">
+                                    <div class="checkout__product-brand">
+                                        <div class="checkout__brand-dropdown">
+                                            <div class="checkout__brand-selected">
+                                                <span class="checkout__brand-label">LavAzza</span>
+                                                <img src="./assets/icons/arrow-down.svg" alt="Arrow"
+                                                    class="checkout__brand-icon icon" />
+                                            </div>
+                                            <ul class="checkout__brand-list">
+                                                <li class="checkout__brand-item">LavAzza</li>
+                                                <li class="checkout__brand-item">Starbucks</li>
+                                                <li class="checkout__brand-item">Nestlé</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkout__product-quantity">
+                                        <button class="checkout__quantity-btn">
+                                            <img src="./assets/icons/minusBtn.svg" alt="" class="icon" />
+                                        </button>
+                                        <input type="text" value="1" class="checkout__quantity-input" />
+                                        <button class="checkout__quantity-btn">
+                                            <img src="./assets/icons/plusbtn.svg" alt="" class="icon" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="checkout__product-actions">
+                                    <button class="checkout__product-save">
+                                        <img src="./assets/icons/heart.svg" alt="">
+                                        <span>Save</span>
+                                    </button>
+                                    <button class="checkout__product-delete">
+                                        <img src="./assets/icons/bin.svg" alt="">
+                                        <span>Delete</span>
+                                    </button>
+                                </div>
+                                <div class="favorite__products-btn primary-btn">Check Out</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-divider"></div>
+
+                    <!-- Product Item -->
+                    <div class="checkout__product">
+                        <div class="favorite__checkbox ">
+                            <input type="checkbox" class="checkout-shipping__checkbox" />
+                        </div>
+                        <div class="checkout__product-image">
+                            <img src="./assets/imgs/product/item 4.png"
+                                alt="Coffee Beans - Espresso Arabica and Robusta Beans" />
+                        </div>
+                        <div class="checkout__product-info">
+                            <div class="checkout__product-info-row">
+                                <h3 class="checkout__product-name">
+                                    Coffee Beans - Espresso Arabica
+                                    and Robusta Beans
+                                </h3>
+                                <div class="checkout__product-total-price">
+                                    $47.00
+                                </div>
+                            </div>
+                            <div class="checkout__price-stock">
+                                <span class="checkout__price">$38.65</span>
+                                <span class="checkout__separator">|</span>
+                                <span class="checkout__stock checkout__stock--in">In Stock</span>
+                            </div>
+
+                            <div class="checkout__product-info-row d-xxl-block">
+                                <div class="checkout__product-controls">
+                                    <div class="checkout__product-brand">
+                                        <div class="checkout__brand-dropdown">
+                                            <div class="checkout__brand-selected">
+                                                <span class="checkout__brand-label">LavAzza</span>
+                                                <img src="./assets/icons/arrow-down.svg" alt="Arrow"
+                                                    class="checkout__brand-icon icon" />
+                                            </div>
+                                            <ul class="checkout__brand-list">
+                                                <li class="checkout__brand-item">LavAzza</li>
+                                                <li class="checkout__brand-item">Starbucks</li>
+                                                <li class="checkout__brand-item">Nestlé</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkout__product-quantity">
+                                        <button class="checkout__quantity-btn">
+                                            <img src="./assets/icons/minusBtn.svg" alt="" class="icon" />
+                                        </button>
+                                        <input type="text" value="1" class="checkout__quantity-input" />
+                                        <button class="checkout__quantity-btn">
+                                            <img src="./assets/icons/plusbtn.svg" alt="" class="icon" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="checkout__product-actions">
+                                    <button class="checkout__product-save">
+                                        <img src="./assets/icons/heart.svg" alt="">
+                                        <span>Save</span>
+                                    </button>
+                                    <button class="checkout__product-delete">
+                                        <img src="./assets/icons/bin.svg" alt="">
+                                        <span>Delete</span>
+                                    </button>
+                                </div>
+                                <div class="favorite__products-btn primary-btn">Check Out</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-divider"></div>
+
+                    <!-- Checkout footer -->
+                    <div class="checkout__footer favorite__footer">
+                        <a href="home.html" class="checkout-backlink">
+                            <img src="./assets/icons/left.svg" alt="" class="icon">
+                            <span>Continue Shopping</span>
+                        </a>
+                        <button class="favorite__footer-btn primary-btn">All Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- my-modal-template -->
+    <template id="my-modal-template">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, earum ea!
+        Explicabo, officia facere. Laborum maxime molestiae officia. Enim expedita temporibus eos doloremque dolor
+        assumenda tenetur necessitatibus sint hic cum.</template>
+    <!-- footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>load("#footer", "./templates/footer.html")</script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        // select 
+        document.querySelectorAll(".checkout__brand-dropdown").forEach((dropdown) => {
+            const selected = dropdown.querySelector(".checkout__brand-selected");
+            const label = dropdown.querySelector(".checkout__brand-label");
+            const items = dropdown.querySelectorAll(".checkout__brand-item");
+
+            selected.onclick = () => {
+                dropdown.classList.toggle("open");
+            };
+
+            items.forEach((item) => {
+                item.onclick = () => {
+                    label.textContent = item.textContent;
+                    dropdown.classList.remove("open");
+                };
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove("open");
+                }
+            });
+        });
+        // check all
+        document.querySelector(".favorite__products-checkall").addEventListener("click", function () {
+            const checkboxes = document.querySelectorAll(".checkout-shipping__checkbox");
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = this.checked;
+            });
+        });
+    </script>
+</body>
+
+</html>

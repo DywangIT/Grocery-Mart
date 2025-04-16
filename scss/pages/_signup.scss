@@ -1,0 +1,167 @@
+@use "../abstracts";
+
+.auth-container {
+    overflow: hidden;
+}
+
+.auth {
+    display: flex;
+    min-height: 100vh;
+    color: var(--auth-text-color);
+
+    .logo {
+        margin: 0;
+    }
+
+    .logo__title {
+        font-size: 2.2rem;
+        color: var(--signup-logo-color);
+    }
+
+    .logo__img {
+        width: 32px;
+    }
+
+    &-intro,
+    &-content {
+        flex: 1;
+        padding: 50px 20px;
+    }
+
+    &-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--auth-intro-bg-color);
+
+        &__img {
+            width: min(424px, 100%);
+        }
+
+        &__desc {
+            margin-top: 50px;
+            max-width: 412px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.5rem;
+                line-height: 146.667%;
+            }
+        }
+
+        .logo {
+            margin-bottom: auto;
+        }
+
+        &__nav {
+            margin-top: auto;
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: center;
+        background: var(--signup-content-color);
+        position: relative;
+
+        &__arrow {
+            position: absolute;
+            top: 26px;
+            left: 33px;
+            width: 40px;
+            filter: brightness(0) saturate(100%) invert(74%) sepia(8%)
+                saturate(284%) hue-rotate(206deg) brightness(85%) contrast(88%);
+        }
+
+        &__inner {
+            width: min(460px, 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__heading {
+            margin-top: 50px;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 146.667%;
+
+            @include abstracts.screen(md) {
+                font-size: 2.2rem;
+                line-height: 145.455%;
+            }
+        }
+
+        &__desc {
+            margin: 10px 0 60px;
+            color: #9e9da8;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+            text-align: center;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
+        }
+
+        .form-link {
+            margin-left: auto;
+            color: #0071dc;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
+        }
+
+        &__footer {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            font-size: 1.8rem;
+            line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &__footer-text {
+            color: #9e9da8;
+        }
+
+        &__footer-link {
+            color: #0071dc;
+            font-weight: 500;
+        }
+
+        .form__btn-primary {
+            color: #1a162e;
+        }
+
+        .user-input,
+        .form__btn-secondary {
+            input::placeholder {
+                color: var(--user-input-border-color);
+            }
+            border-color: var(--user-input-border-color);
+        }
+    }
+
+    @include abstracts.screen(md) {
+        width: 200%;
+
+        &.sign-in {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,305 @@
+@use "../abstracts";
+
+.checkout-shipping {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        width: calc(100% - 100px);
+    }
+    &__edit {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        font-size: 1.8rem;
+        line-height: 144.444%;
+    }
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--payment-item-bg-color);
+    }
+    &__recipient {
+        max-width: calc(100% - 50px);
+    }
+    &__name,
+    &__items-label {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+    &__address,
+    &__items-count {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__address-card {
+        input::before {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__checkbox {
+        appearance: none;
+    }
+
+    &__checkbox::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: block;
+        background: url(../../assets/icons/checkbox.svg) no-repeat
+            center/contain;
+        filter: var(--icon-color);
+    }
+    &__checkbox:checked::before {
+        background: url(../../assets/icons/checkedbox.svg) no-repeat
+            center/contain;
+        filter: none;
+    }
+    &__details-link {
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
+}
+
+.shipping-method {
+    margin-top: 30px;
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--payment-item-bg-color);
+        border-radius: 20px;
+        padding: 20px;
+        transition: border 0.2s;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: start;
+            gap: 16px;
+
+            .shipping-method__meta {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__logo {
+        width: 70px;
+        aspect-ratio: 70 / 54;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 4px;
+        color: #9e9da8;
+        line-height: 150%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:has(input:checked) {
+            .shipping-method__price {
+                color: inherit !important;
+            }
+        }
+    }
+
+    &__price {
+        color: #9e9da8;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__checkmark {
+        display: inline-block;
+        color: #4caf50;
+        margin-left: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    &__checkbox {
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 1px solid #ccc;
+        border-radius: 0.4rem;
+    }
+}
+
+.payment {
+    margin-bottom: 30px;
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__group {
+        margin-top: 30px;
+    }
+
+    &__label {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__input {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #d2d1d6;
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #ededf6;
+
+        input {
+            width: 100%;
+        }
+    }
+    &-divider {
+        width: 1px;
+        height: 18px;
+        background: #d2d1d6;
+    }
+
+    input::placeholder {
+        color: var(--input-playholder-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+    }
+
+    input {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+    }
+    &-summary__footer {
+        margin-top: 30px;
+    }
+    &-summary__footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__footer-btn {
+        width: 100%;
+        border-radius: 10px;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        @include abstracts.screen(xl) {
+            font-size: 2rem;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+        }
+    }
+}
