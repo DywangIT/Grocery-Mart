@@ -1,3 +1,26 @@
+// turn on dark theme
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector("#darktheme-btn");
+    const html = document.documentElement;
+
+    // Áp dụng lại theme nếu đã lưu
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        html.classList.add("dark");
+    }
+
+    if (!button) return;
+
+    button.onclick = () => {
+        html.classList.toggle("dark");
+        const isDark = html.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+
+        if(isDark) button.querySelector('span').innerText = 'Light mode'
+        else button.querySelector('span').innerText = 'Dark mode'
+    };
+});
+
 // Update price range
 document.addEventListener("DOMContentLoaded", function () {
     const minSlider = document.getElementById("min-slider");
@@ -316,6 +339,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // open modal when click delete button
 document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Mozi === "undefined") return;
     const deleteCfModal = new Mozi({
         content: "<p>Are you sure delete this?</p>",
         // templateId: 'my-modal-template',
@@ -335,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const openModalBtns = Array.from(
         document.querySelectorAll(".checkout__product-delete")
     );
-    if(!openModalBtns.length) return;
+    if (!openModalBtns.length) return;
     openModalBtns.forEach((openModalBtn) => {
         openModalBtn.addEventListener("click", function () {
             deleteCfModal.open();
@@ -343,11 +367,86 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// turn on dark theme
+// change slider btn
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.querySelector("#darktheme-btn");
-    if(!button) return;
-    button.onclick = () => {
-        document.documentElement.classList.toggle("dark");
+    const nextBtn = document.querySelector(".slidezi-next");
+    const prevBtn = document.querySelector(".slidezi-prev");
+
+    if (!nextBtn || !prevBtn) return;
+
+    // Gộp 2 nút lại để thao tác chung
+    const buttons = [nextBtn, prevBtn];
+
+    // Gán icon và style mặc định
+    buttons.forEach((btn) => {
+        btn.innerHTML = `<img src="./assets/icons/arrow-right.svg" alt="">`;
+        Object.assign(btn.style, {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+        });
+    });
+
+    // Quay ngược mũi tên của prevBtn
+    prevBtn.querySelector("img").style.rotate = "180deg";
+
+    // Hàm xử lý khi resize
+    function handleResize() {
+        const isMd = window.innerWidth < 992;
+        buttons.forEach((btn) => {
+            if (isMd) {
+                btn.style.width = "42px";
+                btn.style.height = "42px";
+            } else {
+                btn.style.width = "";
+                btn.style.height = "";
+            }
+        });
     }
-})
+
+    // Gọi khi load trang
+    handleResize();
+
+    // Gán 1 lần sự kiện resize
+    window.addEventListener("resize", handleResize);
+});
+
+// filtering input icon
+document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll(".user-input input");
+    if (!inputs) return;
+    inputs.forEach((input) => {
+        const icon = input.closest(".user-input").querySelector("img");
+
+        const updateIconFilter = () => {
+            if (input.value.trim() !== "") {
+                icon.style.filter = `var(--form-icon-filter)`;
+            } else {
+                icon.style.filter = "none";
+            }
+        };
+
+        // Kiểm tra khi load và khi người dùng nhập
+        updateIconFilter();
+        input.addEventListener("input", updateIconFilter);
+    });
+});
+
+// change img src
+document.addEventListener("DOMContentLoaded", function () {
+    const heartImages = document.querySelectorAll("#heart");
+    if (!heartImages.length) return;
+    heartImages.forEach((img) => {
+        img.addEventListener("click", function () {
+            const currentSrc = img.getAttribute("src");
+
+            if (currentSrc.includes("./assets/icons/heart.svg")) {
+                img.setAttribute("src", "./assets/icons/redheart.svg");
+                img.classList.remove("icon");
+                img.style.filter = "none";
+            } else {
+                img.setAttribute("src", "./assets/icons/heart.svg");
+            }
+        });
+    });
+});

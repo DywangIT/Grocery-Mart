@@ -51,6 +51,7 @@ html {
 
     // form
     --form-input-color: #1a162e;
+    --form-icon-filter: brightness(0) saturate(100%);
 
     // product-page
     --product-page--bg-color: #fff;
@@ -101,6 +102,11 @@ html {
     // user menu
     --user-menu-divider: #d6d6d6;
     --user-menu-shadow-color: rgba(99, 99, 99, 0.2);
+
+    // input auto fill color
+    --input-auto-fill-color: inherit;
+
+    // 
 
     @include abstracts.screen(lg) {
         --product-page--bg-color: #fafafd;

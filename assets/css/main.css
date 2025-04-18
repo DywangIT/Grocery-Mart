@@ -144,6 +144,10 @@ img {
   display: block;
 }
 
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--input-auto-fill-color) !important; /* text color */
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1829,7 +1833,7 @@ img {
 @media (max-width: 767.98px) {
   .slidezi-prev,
   .slidezi-next {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1954,10 +1958,14 @@ img {
 }
 
 .product-card {
+  width: 100%;
+  height: 100%;
   padding: 16px;
   border-radius: 20px;
   background: var(--product-card-bg);
   box-shadow: var(--product-card-shadow);
+  display: flex;
+  flex-direction: column;
 }
 .product-card__img-wrap {
   position: relative;
@@ -1989,6 +1997,7 @@ img {
   line-height: 150%;
 }
 .product-card__row {
+  margin-top: auto;
   display: flex;
   align-items: center;
 }
@@ -2929,6 +2938,7 @@ img {
   margin-top: 14px;
   font-size: 1.4rem;
   line-height: 142.857%;
+  word-break: break-word;
 }
 .cart__item-price {
   display: inline-block;
@@ -4637,6 +4647,7 @@ html {
   --signup-logo-color: #1a162e;
   --signup-content-color: #fff;
   --form-input-color: #1a162e;
+  --form-icon-filter: brightness(0) saturate(100%);
   --product-page--bg-color: #fff;
   --breadcumbs-bg-color: #f6f6f6;
   --breadcumbs-shadow-color: rgba(237, 237, 246, 0.2);
@@ -4675,6 +4686,7 @@ html {
   --card-form-input-border-md-color: #292e39;
   --user-menu-divider: #d6d6d6;
   --user-menu-shadow-color: rgba(99, 99, 99, 0.2);
+  --input-auto-fill-color: inherit;
 }
 @media (max-width: 991.98px) {
   html {
@@ -4732,6 +4744,7 @@ html.dark {
   --signup-logo-color: #fff;
   --signup-content-color: #292e39;
   --form-input-color: #fff;
+  --form-icon-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(128deg) brightness(109%) contrast(102%);
   --product-page--bg-color: #292e39;
   --breadcumbs-bg-color: #171c28;
   --breadcumbs-shadow-color: rgba(23, 28, 40, 0.2);
@@ -4766,6 +4779,7 @@ html.dark {
   --card-form-input-border-md-color: #b9babe;
   --user-menu-divider: #5a5a5a;
   --user-menu-shadow-color: rgba(255 255 255 / 0.2);
+  --input-auto-fill-color: #fff;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -4908,7 +4922,7 @@ html.dark {
   height: 50px;
   padding: 0 15px;
   gap: 6px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 146.667%;
 }
@@ -5294,20 +5308,6 @@ html.dark {
 }
 .home__cate-container .home__heading {
   margin-bottom: 20px;
-}
-.home__cate-container .home__cate {
-  --grid-gutter-x: 51px;
-}
-@media (max-width: 1199.98px) {
-  .home__cate-container .home__cate {
-    --grid-gutter-x: 30px;
-    --grid-gutter-y: 20px;
-  }
-}
-@media (max-width: 991.98px) {
-  .home__cate-container .home__cate {
-    --grid-gutter-x: 24px;
-  }
 }
 .home-products-row {
   display: flex;

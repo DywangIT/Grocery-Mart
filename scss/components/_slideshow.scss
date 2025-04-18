@@ -90,7 +90,7 @@
     border-radius: 50%;
 
     @include abstracts.screen(md) {
-        display: none;
+        display: none !important;
     }
 }
 

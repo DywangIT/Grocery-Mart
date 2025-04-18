@@ -53,6 +53,7 @@ html.dark {
 
     // form
     --form-input-color: #fff;
+    --form-icon-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(128deg) brightness(109%) contrast(102%);
 
     // product-page
     --product-page--bg-color: #292e39;
@@ -99,6 +100,9 @@ html.dark {
     // user menu
     --user-menu-divider: #5a5a5a;
     --user-menu-shadow-color: rgba(255 255 255 / 0.2);
+
+    // input auto fill color
+    --input-auto-fill-color: #fff;
 
     @include abstracts.screen(lg) {
         --product-page--bg-color: #292e39;

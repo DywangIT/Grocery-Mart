@@ -89,3 +89,7 @@ select {
 img {
     display: block;
 }
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--input-auto-fill-color) !important; /* text color */
+  }
